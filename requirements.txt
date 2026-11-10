@@ -1,0 +1,22 @@
+# filamentary -- pinned to the versions the README's numbers were measured with on Nov 9 2026
+# (brusque: Ubuntu 26.04, Python 3.14.4, 2x RTX 5090, CUDA 13.0). With these, `bash run.sh --check` prints PQ 0.5540 for the
+# shipped reader and 0.4615 for its fold-1 twin.
+#   python3 -m venv venv && . venv/bin/activate && pip install -r requirements.txt
+# torch and torchvision are PyTorch's own CUDA 13.0 builds, hence the extra index:
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.14.1+cu130
+torchvision==0.29.1+cu130
+segmentation_models_pytorch==0.6.0
+timm==1.0.30
+huggingface_hub==1.29.0
+safetensors==0.8.0
+numpy==2.5.4
+scipy==1.18.1
+pillow==13.0.0
+# not used by run.sh: fila/report_evidence.py draws the report's figures with this
+matplotlib==3.11.2
+# optional, not installed on brusque: cupy. fila/sun_eye.py uses it if present and falls back to numpy if not.
+# to open and run pipeline.ipynb
+notebook==7.6.5
+ipykernel==7.4.0
+nbconvert==7.17.2

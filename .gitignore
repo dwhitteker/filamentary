@@ -1,0 +1,12 @@
+# data, caches, probability maps, work folders and local weights stay out; the shipped reader is committed as split parts
+__pycache__/
+*.pyc
+*.pkl
+*.npz
+*.npy
+*.csv
+*.pt
+*.ckpt
+run_work*/
+MAGFiLO_1.0_Kaggle_2026
+!weights/filamentary.pt.*
